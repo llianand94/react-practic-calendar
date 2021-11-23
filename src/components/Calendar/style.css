@@ -37,13 +37,15 @@
   justify-content: center;
   align-items: center;
   width: calc(45vw/7);
-  height: calc(45vw/7);
-  
+  height: calc(45vw/7);  
+}
+.empty{
+  visibility: hidden;
 }
 .flex-wrap{
   flex-wrap: wrap; 
 }
-.border-table{
+.borderCell{
   border: 1px solid rgb(137, 182, 182);
 }
 

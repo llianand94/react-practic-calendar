@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import CalendarDay from './CalendarDay';
 import CalendarMonth from './CalendarMonth';
+import { setMonth } from 'date-fns';
 
 class Calendar extends Component {
   constructor(props) {
@@ -13,11 +14,12 @@ class Calendar extends Component {
   
   render() {
     
-    const {date} = this.state;     
+    const {date} = this.state; 
+    const getAnotherMonth = setMonth(date,9);    
     return (
       <section className='calendar-wrapper'>
-        <CalendarDay   date={date}/>
-        <CalendarMonth date={date}/>
+        <CalendarDay   date={getAnotherMonth}/>
+        <CalendarMonth date={getAnotherMonth}/>
       </section>
     );
   }

@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 
 
 function CalendarMonthHeader (props) { 
-    return <h2 className="header">{format(props.date, "eeee yyy")}</h2>;
+    return <h2 className="header">{format(props.date, "MMMM yyy")}</h2>;
   }
 
 
