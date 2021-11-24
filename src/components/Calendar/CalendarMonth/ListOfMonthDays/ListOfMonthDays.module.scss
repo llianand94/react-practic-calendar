@@ -1,0 +1,22 @@
+.items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(45vw/7);
+  height: calc(45vw/7);  
+}
+.empty{
+  visibility: hidden;
+}
+.borderCell{
+  border: 1px solid rgb(137, 182, 182);
+}
+.flexWrap{
+  flex-wrap: wrap; 
+}
+.list{
+  display: flex;   
+  justify-content: flex-start;  
+  margin-top: 1vh;
+  padding: 0 2.5vw;
+} 

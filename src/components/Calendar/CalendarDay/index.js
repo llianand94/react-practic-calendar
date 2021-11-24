@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { format } from 'date-fns';
+import styles from './CalendarDay.module.scss';
 
 
-
-class CalendarDay extends Component {
-  render() {
-    return <div className="section-calendar-day">
-        <h1 className="header">{format(this.props.date, 'eeee')}</h1>
-        <span  className="curr-date">{format(this.props.date, 'dd')} </span>
+function CalendarDay (props) {  
+  return <div className={styles.sectionCalendarDay}>
+            <h1 className={styles.header}>
+              {format(props.date, 'eeee')}</h1>
+            <span  className={styles.currentDate}>
+              {format(props.date, 'dd')} </span>
       </div>
     ;
-  }
+  
 }
-
-
-CalendarDay.propTypes = {
-
-};
 
 
 export default CalendarDay;
