@@ -29,7 +29,7 @@
 .list{
   display: flex;   
   justify-content: flex-start;  
-  margin-top: 5%;
+  margin-top: 1vh;
   padding: 0 2.5vw;
 }
 .items{
@@ -50,7 +50,7 @@
 }
 
 .header{
-  padding-top: 15%;
+  padding-top: 5vh;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;

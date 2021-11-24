@@ -12,8 +12,7 @@ class Calendar extends Component {
     }
   }
   
-  render() {
-    
+  render() {    
     const {date} = this.state; 
     const getAnotherMonth = setMonth(date,9);    
     return (
