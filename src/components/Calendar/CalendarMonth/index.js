@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './CalendarMonth.module.scss';
 import CalendarMonthHeader from './CalendarMonthHeader';
 import ListOfWeekDays from './ListOfWeekDays';
 import ListOfMonthDays from './ListOfMonthDays';
-import styles from './CalendarMonth.module.scss';
+import TogglerMonth from './TogglerMonth';
 
 
 class CalendarMonth extends Component {
@@ -13,7 +14,8 @@ class CalendarMonth extends Component {
       <div className={styles.sectionCalendarMonth}>
         <CalendarMonthHeader date={date}/>
         <ListOfWeekDays date={date}/>
-        <ListOfMonthDays date={date}/>        
+        <ListOfMonthDays date={date}/> 
+        <TogglerMonth date={date}/>       
       </div>
     );
   }
