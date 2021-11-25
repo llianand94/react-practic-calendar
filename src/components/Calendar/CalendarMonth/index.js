@@ -7,23 +7,22 @@ import ListOfMonthDays from './ListOfMonthDays';
 import TogglerMonth from './TogglerMonth';
 
 
-class CalendarMonth extends Component {
-  render() {
-    const {date} = this.props;
-    return (
-      <div className={styles.sectionCalendarMonth}>
-        <CalendarMonthHeader date={date}/>
-        <ListOfWeekDays date={date}/>
-        <ListOfMonthDays date={date}/> 
-        <TogglerMonth date={date}/>       
-      </div>
-    );
-  }
+const  CalendarMonth =(props)=> {  
+  const {date,changeMonth } = props;
+  return (
+    <div className={styles.sectionCalendarMonth}>
+      <CalendarMonthHeader date={date}/>
+      <ListOfWeekDays date={date}/>
+      <ListOfMonthDays date={date}/> 
+      <TogglerMonth changeMonth={changeMonth} date={date}/>       
+    </div>
+  );  
 }
 
 
 CalendarMonth.propTypes = {
   date:PropTypes.object.isRequired,
+  changeMonth:PropTypes.func,
 };
 
 

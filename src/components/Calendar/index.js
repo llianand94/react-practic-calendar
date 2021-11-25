@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import CalendarDay from './CalendarDay';
 import CalendarMonth from './CalendarMonth';
 import styles from './Calendar.module.scss';
-import { setMonth } from 'date-fns';
+import { setMonth, getMonth } from 'date-fns';
 
 class Calendar extends Component {
   constructor(props) {
@@ -12,16 +12,23 @@ class Calendar extends Component {
       date:new Date(),
     }
   }
-  changeMonth = () =>{
-    this.setState({state:setMonth(this.state.date,9)})
+  changeMonth = (value) =>{
+    const stepMonth = value==='true'?1:(-1);    
+    this.setState((prevState,prevProps)=>{
+      const currMounth = getMonth(prevState.date);
+      return {
+        date:setMonth(prevState.date, currMounth+(stepMonth))
+        }
+      }
+    )      
   }
+ 
   render() {    
-    const {date} = this.state; 
-    const getAnotherMonth = setMonth(date,9);    
+    const {date} = this.state;       
     return (
       <section className={styles.calendarWrapper}>
-        <CalendarDay   date={getAnotherMonth}/>
-        <CalendarMonth date={getAnotherMonth}/>
+        <CalendarDay   date={date}/>
+        <CalendarMonth changeMonth={this.changeMonth}  date={date}/>
       </section>
     );
   }
