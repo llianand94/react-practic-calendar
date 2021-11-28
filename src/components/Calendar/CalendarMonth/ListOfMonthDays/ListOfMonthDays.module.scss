@@ -1,9 +1,22 @@
+@import './../../../../common/styles/breakpoints';
 .items{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(45vw/7);
-  height: calc(45vw/7);  
+  width: calc(80vw/7);
+  height: calc(80vw/7);
+  @media screen and(min-width: $sm ) {
+    width: calc(45vw/7);
+    height: calc(45vw/7);
+  }  
+  @media screen and(min-width: $xxl ) {
+    width: calc(40vw/7);
+    height: calc(40vw/7);
+  }
+  @media screen and(min-width: $xxxl ) {
+    width: calc(38vw/7);
+    height: calc(38vw/7);
+  } 
 }
 .empty{
   visibility: hidden;
@@ -14,11 +27,20 @@
 .flexWrap{
   flex-wrap: wrap; 
 }
-.list{
+.listMonth{
   display: flex;   
   justify-content: flex-start;  
   margin-top: 1vh;
-  padding: 0 2.5vw;
+  padding: 0 7.5vw;
+  @media screen and(min-width: $sm ) {
+    padding: 0 2.5vw;
+  } 
+  @media screen and(min-width: $xxl ) {
+    padding: 0 5vw;
+  } 
+  @media screen and(min-width: $xxxl ) {
+    padding: 0 6vw;
+  } 
 } 
 .currentDay{
   border: 3px solid rgb(129, 93, 150);

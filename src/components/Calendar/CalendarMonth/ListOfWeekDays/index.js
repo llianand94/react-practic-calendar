@@ -8,7 +8,7 @@ const ListOfWeekDays = () => {
     <li key={id} id={id} className={styles.items}>{letter}</li>)
   })
   return (
-    <ul className={styles.list}>
+    <ul className={styles.listDays}>
       {createWeek}      
     </ul>
   );

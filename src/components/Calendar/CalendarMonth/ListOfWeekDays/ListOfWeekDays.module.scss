@@ -1,15 +1,49 @@
+@import './../../../../common/styles/breakpoints';
+
 .items{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(45vw/7);
-  height: calc(45vw/7);  
+  width: calc(80vw/7);
+  height: calc(80vw/7);
+  @media screen and(min-width: $sm ) {
+    width: calc(45vw/7);
+    height: calc(45vw/7);
+  }  
+  @media screen and(min-width: $xxl ) {
+    width: calc(40vw/7);
+    height: calc(40vw/7);
+  }
+  @media screen and(min-width: $xxxl ) {
+    width: calc(38vw/7);
+    height: calc(38vw/7);
+  } 
 }
-.list{
+
+.listDays{
   display: flex;   
   justify-content: flex-start;  
-  margin-left: auto;
-  margin-top: 1vh;  
-  padding: 0 2.5vw;
-  font-size: 3vh;
+  margin-left: auto;  
+  padding: 0 7.5vw;
+  font-size: 1.2rem;
+  @media screen and(min-width: $sm ) {
+    margin-top: 13%;
+    padding: 0 2.5vw;
+    font-size: 3vh;
+  }
+  @media screen and(min-width: $md ) {
+    margin-top: 12%;
+  }
+  @media screen and(min-width: $xl ) {
+    margin-top: 10%;
+  }
+  @media screen and(min-width: $xxl ) {
+    margin-top: 2%;
+    padding: 0 5vw;
+  }
+  @media screen and(min-width: $xxxl ) {
+    padding: 0 6vw;
+  } 
 }
+
+

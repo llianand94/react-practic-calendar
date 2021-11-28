@@ -1,6 +1,23 @@
+@import './../../../common/styles/breakpoints';
 .sectionCalendarMonth{
-  width: 50vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  width: 100vw;
+  height: 60vh;  
   background-color: azure;
   color: rgb(57, 168, 131);
+  @media screen and (min-width: $sm){      
+    width: 50vw;
+    height: 100vh;
+  } 
+}
+.listsWprapper{  
+  margin: auto; 
+}
+
+.header{
+  padding-top: 5vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;  
 }

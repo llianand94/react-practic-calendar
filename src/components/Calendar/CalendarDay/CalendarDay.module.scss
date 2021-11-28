@@ -1,22 +1,26 @@
+@import './../../../common/styles/breakpoints';
 .sectionCalendarDay{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
-  height: 100vh;
+  width: 100vw;
+  height: 40vh;  
   background-color: rgb(57, 168, 131);
   color: azure;
+  @media screen and (min-width: $sm){      
+    width: 50vw;
+    height: 100vh;
+  } 
 }
-.header{
-  padding-top: 5vh;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
+
 .currentDate{
   display: flex;
   align-self: center;
   margin-top: auto;
   margin-bottom: auto;
   font-size: 15vh;
+}
+
+.fontHeader{
+  font-size: 1.5rem;  
 }

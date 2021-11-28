@@ -1,12 +1,16 @@
+@import './../../../../common/styles/breakpoints';
 .btnWrapper{
   display: flex;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 1.5rem auto 0;
+  @media screen and(min-width: $md ) {
+    margin: 1.5rem auto 0.5rem;
+  }
 }
 .btn{
   width: max-content+10px;
   padding: 0.6rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   background-color:  azure;
   color: rgb(74, 122, 122);
   cursor: pointer;
@@ -16,6 +20,9 @@
   &:hover{    
     color: azure;
     background-color: rgb(74, 122, 122);
+  }
+  @media screen and(min-width: $md ) {
+    font-size: 1.2rem;
   }
 }
 .borderCell{
