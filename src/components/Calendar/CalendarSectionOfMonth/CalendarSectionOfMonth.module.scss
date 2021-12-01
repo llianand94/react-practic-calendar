@@ -1,9 +1,10 @@
 @import './../../../common/styles/breakpoints';
 .sectionCalendarMonth{
-  display: flex;
-  flex-direction: column; 
+  // display: flex;
+  // flex-direction: column; 
+  position: relative;
   width: 100vw;
-  height: 60vh;  
+  height: 65vh;  
   background-color: azure;
   color: rgb(57, 168, 131);
   @media screen and (min-width: $sm){      
