@@ -1,10 +1,6 @@
 @import './../../../../common/styles/breakpoints';
 .btnWrapper{
-  display: flex;
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // bottom: 5%;
+  display: flex;  
   justify-content: center;
   margin: 1.5rem auto 0;
   @media screen and(min-width: $md ) {
@@ -13,7 +9,7 @@
 }
 .btn{  
   width: max-content+10px;
-  padding: 0.6rem;
+  padding: 0.6rem;  
   font-size: 0.9rem;
   background-color:  azure;
   color: rgb(74, 122, 122);
@@ -31,4 +27,5 @@
 }
 .borderCell{
   border: 1px solid rgb(137, 182, 182);
+  border-radius: 15%;
 }

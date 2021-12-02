@@ -1,5 +1,9 @@
+@import './../../../common/styles/breakpoints';
 .header{
-  padding-top: 5vh;
+  padding-top: 3vh;
   text-align: center;
-  text-transform: uppercase;  
+  text-transform: uppercase;
+  @media screen and (min-width:$sm){
+    padding-top: 7vh;
+  }  
 }

@@ -1,26 +1,11 @@
 @import './../../../../common/styles/breakpoints';
-.items{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(80vw/7);
-  height: calc(80vw/7);
-  @media screen and(min-width: $sm ) {
-    width: calc(45vw/7);
-    height: calc(45vw/7);
-  }  
-  @media screen and(min-width: $xxl ) {
-    width: calc(40vw/7);
-    height: calc(40vw/7);
-  }
-  @media screen and(min-width: $xxxl ) {
-    width: calc(38vw/7);
-    height: calc(38vw/7);
-  } 
+@import './../../../../common/styles/templates';
+
+.items{  
+  @extend %items; 
 }
 .empty{
-  visibility: hidden;
-  
+  visibility: hidden;  
 }
 .borderCell{
   border: 1px solid rgb(137, 182, 182);
@@ -33,18 +18,15 @@
   justify-content: flex-start; 
   align-content: center;
   margin-top: 1vh;
-  padding: 0 7.5vw;
+  @extend %listPaddings; 
   @media screen and(min-width: $sm ) {
-    height: 48vmin;
-    padding: 0 2.5vw;
+    height: 48vmin;    
   } 
   @media screen and(min-width: $xxl ) {
-    height: 55vmin;
-    padding: 0 5vw;
+    height: 55vmin;    
   } 
   @media screen and(min-width: $xxxl ) {
-    height: 55vmin;
-    padding: 0 6vw;
+    height: 55vmin;    
   } 
 } 
 .currentDay{
